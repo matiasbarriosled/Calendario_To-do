@@ -1,0 +1,50 @@
+{% extends 'capas/base.html' %}
+
+{% load static %}
+
+
+{% block titulopagina %}
+    Agregar tarea
+{% endblock titulopagina %}
+    
+
+{% block content %}
+    <header class="p-2 p-md-5">
+        {% include 'capas/barra_tareas.html' %}
+    </header>
+    <main class="d-flex justify-content-center align-items-center ">
+        <div class="row shadow-lg">
+            <div class="col-12 col-md-3 bg-dark text-center text-danger fy-evenly">
+                <!-- <a href="{% url 'home' %}" class="btn btn-danger">
+                    <img class="img-fluid" src="{% static '/assets/icons/home.png' %}" alt="">
+                    <h6>home</h6>
+                </a> -->
+                <h2 class="">
+                    fecha: <br>
+                    <strong>
+                        {{fecha | date:"d/M"}}
+                    </strong> <br>
+                    {{fecha.year}}
+                </h2>
+                <h2 class="">
+                    Hora:<br>
+                    {{fecha | date:"H:i"}}
+                </h2>
+            </div>
+            <form method="POST" class="col-12 col-md-9 bg-cadetb-900 text-warning p-sm-2 p-xl-5">
+
+                {% csrf_token %}
+                {% for formulario in form %}
+                    <div class="mb-4 p-1 listas"> {{formulario.label}} <br> {{formulario}}</div>
+                {% endfor %}
+                    
+                <div class="col-12 text-center">
+                    <input class="btn btn-outline-warning" type="submit" value="agregar" class="">
+                </div>
+            </form>
+        </div>
+    </main>
+{% endblock %}
+
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, eum? Quo nemo dolorum voluptatem, tempore blanditiis cupiditate voluptas maiores laudantium illum. Aperiam tempore praesentium voluptatum et repellendus vel reiciendis sapiente quo error ut? Suscipit voluptatibus explicabo animi voluptatem pariatur, expedita tempora, accusamus nemo inventore optio vero, et veritatis earum. Adipisci, sit modi numquam in vel, cum libero sunt quasi porro debitis nostrum quis ab et error molestiae dolor ullam dolores. Id alias nobis facere! Rerum, enim cumque aperiam accusantium corporis nisi minus facere dolore mollitia harum possimus odio, odit iste. Alias laborum aut distinctio mollitia commodi harum nisi architecto eaque possimus optio pariatur reprehenderit deserunt, ut ducimus nostrum aperiam dignissimos autem assumenda dolores laboriosam temporibus eligendi modi! Itaque, corporis aut?
+    

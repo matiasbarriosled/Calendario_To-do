@@ -1,0 +1,101 @@
+{% extends 'capas/base.html' %}
+{% load static %}
+
+
+{% block titulopagina %}
+    Calendario
+{% endblock titulopagina %}
+    
+
+{% block content %}
+
+    <div class="container mt-xl-2 pt-xl-2 mt-xxl-5">
+        <div class="row shadow">
+            <h1 class="display-1 text-center bg-light rounded">Agenda de tareas</h1>
+            <div class="col-12 fra-c p-4">
+                <h2>Frase del dia:</h2>
+                <p class="text-center display-6">" La vida es como una camara enfocate, en aquello que es importante, captura los buenos momentos, saca de lo negativo un aprendizaje revelado y si las cosas no salen como lo esperabas, intenta una nueva toma "</p>
+            </div>
+            <div class="bg-dark text-info p-2 text-center">
+                
+                <a class="btn btn-info" href="{% url 'add_tasks' %}">agregar nueva tarea</a>
+                <a class="btn btn-secondary" href="{% url 'tareas_today' %}">tareas para hoy</a>
+                <a class="btn btn-secondary" href="{% url 'tareas_week' %}">tareas de la semana</a>
+                <a class="btn btn-secondary" href="{% url 'tareas_month' %}">tareas del mes</a>
+                
+            </div>
+            <div class="col-12 col-md-4 bg-danger">
+                <div class="d-block h-50">
+                    <h3>Hoy</h3>
+                    <ul>
+                        <li>12hs estudiar</li>
+                        <li>14hs caminar</li>
+                        <li>15hs QCY</li>
+                    </ul>
+                </div>
+
+                <div class="d-block h-50 border-top">
+                    <h3>Esta semana</h3>
+                    <h6>importante</h6>
+                    <ul>
+                        <li>martes: finalizar trabajo X</li>
+                        <li>jueves: rendir matematicas</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8 bg-warning mx-0 row py-4 justify-content-evenly">
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Enero</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Febrero</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Marzo</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Abril</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Mayo</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Junio</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Julio</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Agosto</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Septiembre</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Octubre</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Noviembre</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+                <div class="card col-12 col-md-6 col-lg-4 my-2">
+                    <h1 class="display-6">Diciembre</h1>
+                    <p> actividades por realizar: <strong class="text-info bg-dark badge"> 0 </strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock content %}
+    

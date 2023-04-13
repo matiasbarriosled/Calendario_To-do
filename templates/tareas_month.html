@@ -1,0 +1,50 @@
+{% extends 'capas/base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <header class="p-2 p-md-5">
+        {% include 'capas/barra_tareas.html' %}
+    </header>
+    <div class="caja-indicador-semana">
+        <ul class="caja-semanal bg-warning">
+            <li>Dom</li>    
+            <li>Lun</li>
+            <li>Mar</li>
+            <li>Mie</li>
+            <li>Jue</li>
+            <li>Vie</li>
+            <li>Sab</li>
+        </ul>
+    </div>
+    <main class="grid-calendar">
+    {% for fecha,tareas in dias_tareas %}
+        {% if fecha %}
+            <div class="grid-caja-calendar color-caja-calendar">
+                <h6>{{fecha | date:"d"}}</h6>
+                {% if tareas%}
+                    <div class="caja-cal-dia">
+                        <div class="caja-tareas">
+                            {% for tarea in tareas %}
+                                <p class="{% cycle 'tarea1' 'tarea2' %}">- {{tarea.nombre_e}} </p>
+                            {% endfor %}
+                        </div>
+                        <a class="btn" href="#">ir al dia</a>
+                    </div>
+                {% else %}
+                    <div class="caja-cal-dia">
+                        <div class="caja-tareas" style="text-align: center;font-size: 11px; color: rgb(160, 160, 160);">
+                            Sin tareas
+                        </div>
+                    </div>
+                {% endif %}
+
+            </div>
+        {% else%}
+            <div class="grid-caja-calendar color-vacio">
+            </div>
+        {% endif %}
+    {% endfor %}
+    </main>
+
+{% endblock content %}

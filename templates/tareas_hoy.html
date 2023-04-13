@@ -1,0 +1,42 @@
+{% extends 'capas/base.html' %}
+
+{% load static %}
+
+
+{% block titulopagina %}
+    tareas del dia
+{% endblock titulopagina %}
+    
+
+{% block content %}
+
+    <div class="row p-5 justify-content-center">
+        {% include 'capas/barra_tareas.html' %}
+
+        <!-- seccion de tareas para el dia corriente -->
+        
+        {% if vacia_o_no %}
+            {% for tarea in tareas %}
+                <div class="row col-12 justify-content-center">
+                    <div class="card col-5 my-2">
+                        <h6 class="bg-light shadow rounded display-6 text-center p-2">
+                            {{tarea.hora_fecha_e}}
+                        </h6>
+                        <h1>{{tarea.nombre_e}}</h1>
+                        <hr>
+                        <p>
+                            {{tarea.nota_e}}
+                        </p>
+                        <input type="">
+                    </div>
+                </div>    
+            {% endfor %}
+            
+
+        {% else %}            
+            <div class="card col-8 p-5 my-3 shadow display-6"> no hay tareas programadas para el dia de hoy</div>    
+        {% endif %}
+
+    </div>
+
+{% endblock content %}

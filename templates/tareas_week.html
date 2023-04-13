@@ -1,0 +1,147 @@
+{% extends 'capas/base.html' %}
+
+
+{% block titulopagina %}
+    tareas de la semana
+{% endblock titulopagina %}
+    
+
+{% block content %}
+    
+
+    
+<section class="" id="">
+  <header class="p-2 p-md-5">
+  {% include 'capas/barra_tareas.html' %}
+  </header>
+    <div class="">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-12 bg-light pb-2 my-1 rounded">
+            <h1 class="display-4 shadow-lg"> Lunes </h1>
+            <hr>
+              {% for tareas in lunes %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Martes </h1>
+            <hr>
+              {% for tareas in martes %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Miercoles </h1>
+            <hr>
+              {% for tareas in miercoles %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Jueves </h1>
+            <hr>
+              {% for tareas in jueves %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Viernes </h1>
+            <hr>
+              {% for tareas in viernes %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Sabado </h1>
+            <hr>
+              {% for tareas in sabado %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+          <div class="col-12 bg-light border pb-2">
+            <h1 class="display-4 shadow-lg"> Domingo </h1>
+            <hr>
+              {% for tareas in domingo %}
+              <div class="ps-2 py-1 row bg-whitesmoke my-1">
+                <div class="col-6">
+                  <h6>{{tareas.hora_fecha_e}}</h6>
+                  <h4>{{tareas.nombre_e}}</h4>
+                </div>
+                <div class="col-6">
+                  <p>{{tareas.nota_e}}</p>
+                </div>
+              </div>
+              {% endfor %}
+            <hr>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  {% endblock content %}

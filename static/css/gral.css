@@ -1,0 +1,116 @@
+body{
+    /* background-image: url(../assets/bg2.png); */
+    background-color: #2a2b37;
+}
+
+.fra-c{
+    background: linear-gradient(120deg, #c63030,#cf3434,#ddad27, #ffe404);
+    color: #fdf5b6;
+    text-shadow: 1px 2px #372c2a;
+    font-family: alota;
+}
+
+.vert-d{
+    height: 100vh;
+}
+
+/* ------------------------------------ calendario ------------------------------------ */
+.caja-indicador-semana{
+    margin: 0px auto;
+    width: 90%;
+}
+.caja-semanal{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    list-style-type: none;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 5px;
+}
+.caja-semanal li{
+    text-align: center;
+}
+
+.grid-calendar{
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    background-color: #818e91;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
+    border:solid 1px #5d735d;
+    border-radius: 6px;
+    gap: 2px;
+}
+.color-vacio{
+    background-color: #92c8914a;
+    border-radius: 10px;
+    border:solid 1px rgba(79, 161, 155, 0.514);
+}
+.color-caja-calendar{
+    background-color: #e8fffd;
+    border-radius: 5px;
+}
+.grid-caja-calendar{
+    display: flex;
+    height: 120px;
+    border: solid 1px #d2d287;
+}
+.grid-caja-calendar h6{
+    color: #073900;
+}
+.caja-cal-dia{
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    width: 100%;
+    box-shadow: 1px 1px 20px #52e60040;
+    color: #012f00;
+}
+.grid-caja-calendar p{
+    font-size: 10px;
+    margin: 2px;
+    margin-left: 5px;
+}
+.caja-tareas{
+    overflow-y: scroll;
+}
+.caja-tareas-vacia{
+    background-color: #ecedee;
+}
+.tarea1 {
+    background-color: #cdf7dd;
+    color: rgb(61, 60, 0);
+  }
+.tarea2 {
+    background-color: #d2fcf8;
+    color: #003111;
+  }
+/*  ------------------------------- -------------------------------- -----------------------------  */
+
+.fy-evenly{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bg-cadetb-900{
+    background-color: rgb(21, 33, 34);
+}
+
+.listas>ul{
+    padding-left: 5px;
+}
+.listas>ul>li{
+    list-style-type: none;
+    margin-left: 2px;
+    margin-bottom: 10px;
+}
+
+.bg-whitesmoke{
+    background-color: rgb(236, 236, 236);
+}
+
+@font-face {
+    font-family: alota;
+    src: url(../assets/fuentes/Alota.ttf);
+}
