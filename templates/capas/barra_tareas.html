@@ -4,34 +4,31 @@
     <div class="col-1">
         <a class="btn btn-danger" href="{% url 'home' %}">
             <img class="img-fluid" src="../static/assets/icons/home.png" alt="">
+            <h6>Inicio</h6>
         </a>
     </div>
-    <div class="col-1">
+    <div class="col-1 ">
         <a class="btn btn-danger" href=" {% url 'add_tasks' %} ">
-            <h4>
-                <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/plus.png' %}" alt="">
-            </h4>
+            <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/plus.png' %}" alt="">
+            <h6>Agregar</h6>
         </a>
     </div>
     <div class="col-1">
         <a class="btn btn-danger" href=" {% url 'tareas_today' %} ">
-            <h4>
-                <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/calendario.png' %}" alt="">
-            </h4>
+            <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/calendario.png' %}" alt="">
+            <h6>Hoy</h6>
         </a>
     </div>
     <div class="col-1">
         <a class="btn btn-danger" href="{% url 'tareas_week' %}">
-            <h4>
-                <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/week.png' %}" alt="">
-            </h4>
+            <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/week.png' %}" alt="">
+            <h6>Semana</h6>
         </a>
     </div>
     <div class="col-1">
         <a class="btn btn-danger" href="{%url 'tareas_month' %}">
-            <h4>
-                <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/month.png' %}" alt="">
-            </h4>
+            <img class="img-fluid" src="{% static '/assets/icons/iconos-w-m-+/month.png' %}" alt="">
+            <h6>Mes</h6>
         </a>
     </div>
 </div>
